@@ -6,6 +6,7 @@ import org.junit.jupiter.api.extension.ExtendWith
 import org.mockito.Mockito.`when`
 import org.mockito.junit.jupiter.MockitoExtension
 import org.springframework.beans.factory.annotation.Autowired
+import org.springframework.boot.test.autoconfigure.web.reactive.WebFluxTest
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest
 import org.springframework.boot.test.mock.mockito.MockBean
 import org.springframework.context.annotation.Import
@@ -20,7 +21,7 @@ import java.util.*
 
 @ExtendWith(SpringExtension::class, MockitoExtension::class)
 @Import(UserHandler::class)
-@WebMvcTest
+@WebFluxTest
 class UserRouterTest {
 
     @MockBean
